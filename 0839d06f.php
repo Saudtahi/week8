@@ -10,7 +10,7 @@
 partially done and serves only as a starting point for the assignment.
 </p>
 <p>
-<a href="login.php">Please Log In</a>
+<a href="login.php">Login</a>
 </p>
 <p>
 Attempt to go to 
