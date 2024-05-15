@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Saud Tahir- Broken Rock Paper Scissors 0839d06f </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 0839d06f</title>
 </head>
 <body>
-<div class="container">
-<h1>Welcome to Broken Rock Paper Scissors</h1>
-<p><strong>Note:</strong> This sample code is only
-partially done and serves only as a starting point for the assignment.
-</p>
-<p>
-<a href="login.php">Login</a>
-</p>
-<p>
-Attempt to go to 
-<a href="game.php">game.php</a> without logging in - it should fail with an error message.
-    </p>
-</div>
+    <h2>Please Log In</h2>
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Login</button>
+    </form>
 </body>
-
+</html>
