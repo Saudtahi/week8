@@ -37,7 +37,7 @@
     ?>
     
     <p>
-        <a href="0839d06f.php">Play Again</a>
+        <a href="login.php">Play Again</a>
     </p>
 </body>
 </html>
