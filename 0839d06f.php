@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rock Paper Scissors Game 0839d06f</title>
+    <title>Login 0839d06f</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1>Login</h1>
     <form method="POST">
-        <p>Select one:</p>
-        <input type="radio" name="choice" value="rock"> Rock<br>
-        <input type="radio" name="choice" value="paper"> Paper<br>
-        <input type="radio" name="choice" value="scissors"> Scissors<br>
-        <input type="submit" value="Play">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Login">
     </form>
-    
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $choices = ["rock", "paper", "scissors"];
-        $user_choice = $_POST["choice"];
-        $computer_choice = $choices[array_rand($choices)];
+        // Check username and password
+        $username = $_POST["username"];
+        $password = $_POST["password"];
         
-        echo "<p>You chose: " . htmlentities($user_choice) . "</p>";
-        echo "<p>Computer chose: " . htmlentities($computer_choice) . "</p>";
-        
-        if ($user_choice == $computer_choice) {
-            echo "<p>It's a tie!</p>";
-        } elseif (
-            ($user_choice == "rock" && $computer_choice == "scissors") ||
-            ($user_choice == "paper" && $computer_choice == "rock") ||
-            ($user_choice == "scissors" && $computer_choice == "paper")
-        ) {
-            echo "<p>You win!</p>";
+        // Add your authentication logic here
+        // For testing purposes, let's assume the correct username and password are "admin" and "password" respectively
+        if ($username == "admin" && $password == "password") {
+            // Redirect to game.php if authentication succeeds
+            header("Location: game.php");
+            exit;
         } else {
-            echo "<p>You lose!</p>";
+            // Display error message for incorrect credentials
+            echo "<p>Incorrect username or password.</p>";
         }
     }
     ?>
-    
-    <p>
-        <a href="index.php">Play Again</a>
-    </p>
 </body>
 </html>
